@@ -10,16 +10,10 @@
         <th>Word</th>
       </tr>
       <?php
-      $dbhost = getenv("MYSQL_SERVICE_HOST");
-      $dbport = getenv("MYSQL_SERVICE_PORT");
-      $dbuser = getenv("MYSQL_USER");
-      $dbpwd = getenv("MYSQL_PASSWORD");
-      $dbname = getenv("MYSQL_DATABASE");
-    
-      $connection = new mysqli("localhost", $dbuser, $dbpwd, $dbname);
-
-      if ($conn-> connect_error) {
-        die("Connection failed:". $conn-> connect_error);
+      $mysqli = new mysqli("localhost", "admin", "redhat", "db");
+      
+      if ($mysqli->connect_errno) {
+          echo "Failed to connect to MySQL: (" . $mysqli->connect_errno . ") " . $mysqli->connect_error;
       }
 
       $sql = "SELECT id, word from words";
