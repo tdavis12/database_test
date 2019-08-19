@@ -10,7 +10,14 @@
         <th>Word</th>
       </tr>
       <?php
-      $conn = mysqli_connect("localhost", "root", "", "company");
+      $dbhost = getenv("MYSQL_SERVICE_HOST");
+      $dbport = getenv("MYSQL_SERVICE_PORT");
+      $dbuser = getenv("databaseuser");
+      $dbpwd = getenv("databasepassword");
+      $dbname = getenv("databasename");
+    
+      $connection = new mysqli("localhost", $dbuser, $dbpwd, $dbname);
+
       if ($conn-> connect_error) {
         die("Connection failed:". $conn-> connect_error);
       }
