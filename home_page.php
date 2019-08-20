@@ -27,7 +27,7 @@
       word VARCHAR(30) NOT NULL
     )";
 
-    $conn->close();
+    $mysqli->close();
     ?>
 
     <p>This webapp is used to test databases.</p>
