@@ -22,7 +22,7 @@
     echo $mysqli->host_info . "\n";
 
     // create table
-    $sql = "CREATE TABLE Words (
+    $sql = "CREATE TABLE words (
       id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
       word VARCHAR(30) NOT NULL
     )";
