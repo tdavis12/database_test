@@ -25,13 +25,13 @@
     $sql = "INSERT INTO words (word)
     VALUES ('$entry')";
 
-    if ($conn->query($sql) === TRUE) {
+    if ($mysqli->query($sql) === TRUE) {
         echo "New record created successfully";
     } else {
-        echo "Error: " . $sql . "<br>" . $conn->error;
+        echo "Error: " . $sql . "<br>" . $mysqli->error;
     }
 
-    $conn->close();
+    $mysqli->close();
     ?>
 
   </body>

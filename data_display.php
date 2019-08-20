@@ -21,7 +21,7 @@
       }
 
       // $sql = "SELECT id, firstname, lastname FROM MyGuests";
-      // $result = $conn->query($sql);
+      // $result = $mysqli->query($sql);
       
       // if ($result->num_rows > 0) {
       //     // output data of each row
@@ -31,10 +31,10 @@
       // } else {
       //     echo "0 results";
       // }
-      // $conn->close();
+      // $mysqli->close();
 
       $sql = "SELECT id, word from words";
-      $result = $conn -> query($sql);
+      $result = $mysqli -> query($sql);
 
       if ($result-> num_rows > 0) {
         while ($row = $result-> fetch_assoc()) {
@@ -46,7 +46,7 @@
         echo "0 result";
       }
 
-      $conn-> close();
+      $mysqli-> close();
       ?>
     </table>
   </body>
