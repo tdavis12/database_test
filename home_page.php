@@ -18,10 +18,10 @@
     }
 
     echo $mysqli->host_info . "\n";
-    echo "Host: " . $host;
-    echo "\n Usename: " . $username;
-    echo "\n Password: " . $user_pass;
-    echo "\n Database: " . $database;
+    echo "Host: " . $host . "\n";
+    echo "Username: " . $username . "\n";
+    echo "Password: " . $user_pass . "\n";
+    echo "Database: " . $database . "\n";
     echo $mysqli->host_info . "\n";
 
     ?>
