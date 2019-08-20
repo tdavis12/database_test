@@ -19,7 +19,7 @@
 
     echo $mysqli->host_info . "\n";
     echo "Host: " . $host;
-    echo "\n Username: " . $username;
+    echo "\n Usename: " . $username;
     echo "\n Password: " . $user_pass;
     echo "\n Database: " . $database;
     echo $mysqli->host_info . "\n";
