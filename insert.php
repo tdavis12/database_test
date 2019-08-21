@@ -12,6 +12,7 @@
     $username = getenv("username");
     $user_pass = getenv("password");
     $database = getenv("database_name");
+    $data = htmlspecialchars($_POST['data']);
 
     // create connection
     $mysqli = new mysqli($host, $username, $user_pass, $database);
@@ -22,8 +23,8 @@
     echo $mysqli->host_info . "\n";
 
     // insert data
-    $sql = "INSERT INTO words (word)
-    VALUES ('htmlspecialchars($_POST['data'])')";
+
+    $sql = "INSERT INTO words (word) VALUES ('$data')";
 
     if ($mysqli->query($sql) === TRUE) {
         echo "New record created successfully";
