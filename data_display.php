@@ -4,6 +4,7 @@
     <title>Database Table</title>
   </head>
   <body>
+    <h1>Database Table</h1>
     <table>
       <?php
       $host = getenv("host");
@@ -37,9 +38,11 @@
 
       <p>Click to enter more data:</p>
       <button onclick="window.location.href = 'home_page.php';">Database</button>
-
+      <br>
       <form action="clear.php" method="post">
-        Click to clear database:<br>
+        Click to clear database:
+        <br>
+        <br>
         <input type="submit" value="Clear">
       </form>
 
