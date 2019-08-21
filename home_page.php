@@ -38,7 +38,7 @@
 
     <p>This webapp is used to test databases.</p>
 
-    <form action="insert.php" method="get">
+    <form action="insert.php" method="post">
       Enter a word below:<br>
       <input type="text" name="data"><br>
       <input type="submit" value="Submit">

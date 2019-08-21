@@ -23,7 +23,7 @@
 
     // insert data
     $sql = "INSERT INTO words (word)
-    VALUES (NULL, '$data')";
+    VALUES ('htmlspecialchars($_POST['data'])')";
 
     if ($mysqli->query($sql) === TRUE) {
         echo "New record created successfully";
