@@ -50,8 +50,9 @@
 
     <p>Click here to see what data is already in the database.</p>
     <button onclick="window.location.href = 'data_display.php';">Database</button>
-    <br>
+
     <form action="clear.php" method="post">
+      <br>
       Click to clear database:
       <br>
       <br>

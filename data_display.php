@@ -38,8 +38,9 @@
 
       <p>Click to enter more data:</p>
       <button onclick="window.location.href = 'home_page.php';">Database</button>
-      <br>
+
       <form action="clear.php" method="post">
+        <br>
         Click to clear database:
         <br>
         <br>
