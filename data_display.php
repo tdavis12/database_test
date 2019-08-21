@@ -20,31 +20,21 @@
         echo "Failed to connect to MySQL: (" . $mysqli->connect_errno . ") " . $mysqli->connect_error;
       }
 
-      // $sql = "SELECT id, firstname, lastname FROM MyGuests";
-      // $result = $mysqli->query($sql);
-      
-      // if ($result->num_rows > 0) {
-      //     // output data of each row
-      //     while($row = $result->fetch_assoc()) {
-      //         echo "id: " . $row["id"]. " - Name: " . $row["firstname"]. " " . $row["lastname"]. "<br>";
-      //     }
-      // } else {
-      //     echo "0 results";
-      // }
-      // $mysqli->close();
+      $result = mysqli_query($mysqli,"SELECT * FROM words");
 
-      $sql = "SELECT id, word from words";
-      $result = $mysqli -> query($sql);
+      echo "<table border='1'>
+      <tr>
+      <th>id</th>
+      <th>word</th>
+      </tr>";
 
-      if ($result-> num_rows > 0) {
-        while ($row = $result-> fetch_assoc()) {
-          echo "<tr><td>". $row["Id"] ."</td><td>". $row["Word"] ."</td></tr>";
-        }
-        echo "</table>";
+      while($row = mysqli_fetch_array($result)) {
+        echo "<tr>";
+        echo "<td>" . $row['id'] . "</td>";
+        echo "<td>" . $row['word'] . "</td>";
+        echo "</tr>";
       }
-      else {
-        echo "0 result";
-      }
+      echo "</table>";
 
       $mysqli-> close();
       ?>
