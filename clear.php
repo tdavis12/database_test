@@ -1,6 +1,7 @@
 <html>
   <head>
-    <title>Clear Page</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <title>Clear Page</title>
   </head>
   <body>
     <h1>Data Cleared</h1>

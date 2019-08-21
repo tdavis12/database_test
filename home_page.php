@@ -1,6 +1,7 @@
 <html>
   <head>
-    <title>Main Page</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <title>Main Page</title>
   </head>
   <body>
     <h1>Welcome to the Database Test</h1>

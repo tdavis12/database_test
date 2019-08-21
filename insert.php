@@ -1,6 +1,7 @@
 <html>
   <head>
-    <title>Insert Page</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <title>Insert Page</title>
   </head>
   <body>
     <h1>Data Inserted</h1>

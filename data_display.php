@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Database Table</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <title>Database Table</title>
   </head>
   <body>
     <h1>Database Table</h1>
