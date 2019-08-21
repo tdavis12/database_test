@@ -1,9 +1,9 @@
 <html>
   <head>
-    <title>Insert Page</title>
+    <title>Clear Page</title>
   </head>
   <body>
-    <h1>Data Inserted</h1>
+    <h1>Data Cleared</h1>
 
     <?php
 
@@ -22,11 +22,11 @@
 
     echo $mysqli->host_info . "\n";
 
-    // insert data
-    $sql = "INSERT INTO words (word) VALUES ('$data')";
+    // clear data
+    $sql = "DROP TABLE words";
 
     if ($mysqli->query($sql) === TRUE) {
-        echo "\"$data\" inserted successfully.";
+        echo "Cleared successfully.";
     } else {
         echo "Error: " . $sql . "<br>" . $mysqli->error;
     }
@@ -34,11 +34,7 @@
     $mysqli->close();
     ?>
 
-    <p>Click to enter more data:</p>
-    <button onclick="window.location.href = 'home_page.php';">Return</button>  
-
-    <p>Click to see results:</p>
-    <button onclick="window.location.href = 'data_display.php';">Database</button> 
+    <button onclick="window.location.href = 'home_page.php';">Return to home page</button>  
 
   </body>
 </html>

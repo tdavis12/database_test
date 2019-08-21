@@ -3,10 +3,9 @@
     <title>Main Page</title>
   </head>
   <body>
-    <h1>Welcome to the homepage.</h1>
+    <h1>Welcome to the Database Test</h1>
 
     <?php
-
     // create varialbes
     $host = getenv("host");
     $username = getenv("username");
@@ -28,7 +27,7 @@
     )";
 
     if ($mysqli->query($sql) === TRUE) {
-      echo "New record created successfully";
+      echo "New table created successfully";
     } else {
       echo "Error: " . $sql . "<br>" . $mysqli->error;
     }
@@ -36,14 +35,24 @@
     $mysqli->close();
     ?>
 
-    <p>This webapp is used to test databases.</p>
+    <p>This webapp is used to test databases. This webapp was specifially made to test running a MySQL database with Openshift.</p>
+    <p>Using this site, you are able to fill a MySQL database with strings that are 255 characters or less. 
+      These strings will be auto-incramented and stored in the order you entered them.</p>
+    <p>To begin filling the database with data, enter a word below and press "Submit"</p>
 
     <form action="insert.php" method="post">
       Enter a word below:<br>
       <input type="text" name="data"><br>
       <input type="submit" value="Submit">
     </form>
-    <p>The data enterd should be returned on the next page.</p>
-    <button onclick="window.location.href = 'data_display.php';">I am a button</button>
+
+    <p>Click here to see what data is already in the database.</p>
+    <button onclick="window.location.href = 'data_display.php';">Database</button>
+
+    <form action="clear.php" method="post">
+      Click to clear database:<br>
+      <input type="submit" value="Clear">
+    </form>
+
   </body>
 </html>

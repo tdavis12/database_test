@@ -5,10 +5,6 @@
   </head>
   <body>
     <table>
-      <tr>
-        <th>Id</th>
-        <th>Word</th>
-      </tr>
       <?php
       $host = getenv("host");
       $username = getenv("username");
@@ -38,6 +34,15 @@
 
       $mysqli-> close();
       ?>
+
+      <p>Click to enter more data:</p>
+      <button onclick="window.location.href = 'home_page.php';">Database</button>
+
+      <form action="clear.php" method="post">
+        Click to clear database:<br>
+        <input type="submit" value="Clear">
+      </form>
+
     </table>
   </body>
 </html>
